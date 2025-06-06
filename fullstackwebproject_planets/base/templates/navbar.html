@@ -1,0 +1,10 @@
+        {% load static %}
+        <div class="main-header">
+            <p class="header-title">THE PLANETS</p>
+            <div class="planet-links-container">
+                {% for planet in planets %}
+                <a href="{% url 'planet-filtered' planet.titlename %}" class="planet-links" data-color="{{ filtered_planet.animationcolor }}">{{planet.titlename}}</a>
+                {% endfor %}
+            </div>
+            <img class="burger-bar" src="{% static 'images/Group.png' %}">
+        </div>

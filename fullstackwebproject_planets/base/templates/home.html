@@ -1,0 +1,93 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+        <div class="menubar">
+                {% for planet in planets %}
+            <a href="{% url 'planet-filtered' planet.titlename %}" class="menubar-container">
+                <div class="container-left">
+                    <div class="divplanet pl1 {{ planet.titlename }}" data-color="{{ planet.animationcolor }}"></div>
+                    <p class="planetname">{{ planet.titlename }}</p>
+                </div>
+                <p class="container-right">></p>
+            </a>
+                {% endfor %}
+
+        </div>
+
+
+    <div class="buttons-div delete1">
+        <button class="buttons-div-button anotherbutton" data-planet-index2="${index}" data-color="{{ filtered_planet.animationcolor }}">OVERVIEW</button>
+        <button class="buttons-div-button anotherbutton" data-planet-index2="${index}" data-color="{{ filtered_planet.animationcolor }}">STRUCTURE</button>
+        <button class="buttons-div-button anotherbutton" data-planet-index2="${index}" data-color="{{ filtered_planet.animationcolor }}">SURFACE</button>
+    </div>
+
+
+    <div class="main-content-container">
+    <!-- main selector (planet, content, content buttons) -->
+    <div class="main-selector">
+
+
+        <div class="main-img-selector">
+            <div class="image-absolute">
+            <img class="planet both1 animation1" src="{{ filtered_planet.planetimage1.url }}">
+            <img id="planet-images" class="invisible animation1" src="{{ filtered_planet.planetimage1.url }}">
+            <img class="planet-2" src="{{ filtered_planet.planetimage2.url }}">
+            <img class="planet-3" src="{{ filtered_planet.planetimage3.url }}">
+        </div>
+        </div>
+
+
+        <div class="main-content-selector animation2">
+
+            <div class="content-selector">
+                <p class="content-title">{{ filtered_planet.titlename }}</p>
+                <p class="content-text tx1">{{ filtered_planet.content1 }}
+                    </p>
+                <p class="content-text tx2">{{ filtered_planet.content2 }}
+                    </p>
+                 <p class="content-text tx3">{{ filtered_planet.content3 }}
+                    </p>
+                <p class="content-source">Source : <a href="{{ filtered_planet.source }}" target="_blank" class="source-link">Wikipedia</a></p>
+            </div>
+            
+            <div class="delete-it">
+            <div class="buttons-div">
+                <button class="buttons-div-button anotherbutton2" data-planet-index="${index}" data-color="{{ filtered_planet.animationcolor }}"><span class="button-number">01</span> OVERVIEW</button>
+                <button class="buttons-div-button anotherbutton2" data-planet-index="${index}" data-color="{{ filtered_planet.animationcolor }}"><span class="button-number">02</span> INTERNAL STRUCTURE</button>
+                <button class="buttons-div-button anotherbutton2" data-planet-index="${index}" data-color="{{ filtered_planet.animationcolor }}"><span class="button-number">03</span> SURFACE GEOLOGY</button>
+            </div>
+        </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="main-buttons-container">
+    <!-- record containers -->
+    <div class="record-container">
+
+        <div class="record-selector">
+            <p class="record-left">ROTATION TIME</p>
+            <p class="record-right">{{ filtered_planet.button1content }}</p>
+        </div>
+        <div class="record-selector">
+            <p class="record-left">REVOLUTION TIME</p>
+            <p class="record-right">{{ filtered_planet.button2content }}</p>
+        </div>
+        <div class="record-selector">
+            <p class="record-left">RADIUS</p>
+            <p class="record-right">{{ filtered_planet.button3content }}</p>
+        </div>
+        <div class="record-selector">
+            <p class="record-left">AVERAGE TEMP.</p>
+            <p class="record-right">{{ filtered_planet.button4content }}</p>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
