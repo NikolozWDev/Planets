@@ -3,6 +3,7 @@
 
 ## 1. Project Description
 This is a fullstack web application focused on planets. It allows users to view information about different planets with images and descriptions. The backend is built with Django and Python, while the frontend uses HTML, CSS, and JavaScript.
+This project does not have a traditional home page. Instead, by UI/UX design (as specified in the original Figma prototype), the default landing page is the Mercury planet page. When a user accesses the root URL (/), the application automatically redirects to /MERCURY, treating it as the default page.
 
 
 ## 2. Technologies Used
