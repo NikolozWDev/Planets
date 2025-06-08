@@ -104,6 +104,34 @@ anotherbuttons[0].click();
 
     
 }
+
+// fixing images on load and fixing that widths
+window.addEventListener('load', () => {
+
+    const imagesfix = document.querySelectorAll('.invisible');
+    const planet2Fixer = document.querySelector('.planet-2')
+
+    imagesfix.forEach(img => {
+        if(img.naturalWidth > 500) {
+        img.style.width = '500px';
+        img.style.height = 'auto';
+        }
+        if(img.naturalWidth === 668) {
+            planet2Fixer.style.height = '66%';
+            planet2Fixer.style.transform = 'translateX(-85px)';
+            if(window.innerWidth < 1200) {
+                planet2Fixer.style.height = '66%';
+                planet2Fixer.style.transform = 'translateX(-20px)';
+        }
+            if(window.innerWidth > 1000 && window.innerWidth < 1200) {
+                planet2Fixer.style.height = '66%';
+                planet2Fixer.style.transform = 'translateX(-45px)';
+        }
+        }
+  });
+
+})
+
 document.addEventListener('DOMContentLoaded', () => {
     manipulation();
 });
