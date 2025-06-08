@@ -32,9 +32,10 @@ This is a fullstack web application focused on planets. It allows users to view 
    env\Scripts\activate
 3. Install dependencies:
     pip install -r requirements.txt
-4. Run database migrations:
+4. pip install django pillow
+5. Run database migrations:
     python manage.py migrate
-5. Start the development server:
+6. Start the development server:
     python manage.py runserver
-6. Open your browser and visit:
+7. Open your browser and visit:
     http://127.0.0.1:8000/
