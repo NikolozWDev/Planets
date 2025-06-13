@@ -1,34 +1,16 @@
-# Python-related
 __pycache__/
 *.py[cod]
 *.log
 
-# Django
-db.sqlite3
-*.sqlite3
-*.pyc
-
-# Environments
 env/
 .venv/
 *.env
-.env
 
-# VSCode/IDE related
 .vscode/
 .idea/
 
-# OS files
 .DS_Store
 Thumbs.db
 
-# Migrations (არა სავალდებულო, მხოლოდ დროებითი ფაზისთვის)
 **/migrations/__pycache__/
 **/migrations/*.pyc
-
-# Media uploads
-/media/
-
-# Static-generated cache (თუ იყენებ whitenoise-ს ან collectstatic-ს)
-staticfiles/
-static_root/
