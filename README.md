@@ -32,10 +32,10 @@ This project does not have a traditional home page. Instead, by UI/UX design (as
    python -m venv env
    env\Scripts\activate
 3. Install dependencies:
-    pip install -r requirements.txt
+    pip install -r requirements.txt (not this deleted)
 4. pip install django pillow
 5. Run database migrations:
-    python manage.py migrate
+    python manage.py migrate (not this deleted)
 6. Start the development server:
     python manage.py runserver
 7. Open your browser and visit:
